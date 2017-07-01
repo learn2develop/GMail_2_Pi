@@ -2,11 +2,11 @@
 + Sending command via email to your Raspberry Pi
 
 # Requirements
-+ Gmail or any other email address which supports SMTP
++ Gmail account
 + Define allowed email addresses into ALLOWED = []
-+ Define email address for Raspberry Pi to probe
-+ Define the password for the email address
-+ Define triggering subject string
++ Define EMAIL address for Raspberry Pi to probe
++ Define PASSWORD for the email address password
++ Define SUBJECT with triggering subject string
 
 # Process
 1. Send email to the email address with trigger header to the defined email address from allowed email
