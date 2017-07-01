@@ -169,9 +169,6 @@ def read_gmail(subject):
 
 
 def main():
-    """
-    Main method
-    """
 
     print "Waiting for an email"
 
@@ -207,6 +204,8 @@ def main():
                     print "Timeout"
                     print "Destroying the key"
                     secret_key = None # destroy the key
+
+                    send_gmail(original_sender, "System Timeout", "You have run out of time, please start again")
                     break
 
                 # The second phase email
@@ -226,6 +225,8 @@ def main():
                         command = second_reply['body']
                         print "Secret key matched"
                         print "Command to execute:" + command.strip()
+                        send_gmail(original_sender, second_reply['subject'], "Command executed succesfully")
+                        print "Confirmation sent to " + original_sender
                         secret_key = None # destroy the key
                         print "Destroying the key"
                         print "Waiting for an email"
@@ -233,21 +234,18 @@ def main():
                     else:
 
                         print "Key did not match"
-                        secret_key = None # destroy the key
-                        print "Destroying the existing key"
                         print "Generating new key"
                         secret_key = generate_code()
-                        print "Re-generated code: " + secret_key
+                        print "New generated code: " + secret_key
                         send_gmail(original_sender, SUBJECT + " [NEW] " + secret_key, "")
                         print "New key sent to " + original_sender
 
                 time.sleep(5)
                 timecount += 5
 
+
+
         time.sleep(5)
-
-
-#########################
 
 
 if __name__ == '__main__':
