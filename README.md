@@ -3,7 +3,7 @@
 
 # Requirements
 + Gmail account
-+ Define allowed email addresses into ALLOWED = []
++ Define ALLOWED email address list
 + Define EMAIL address for Raspberry Pi to probe
 + Define PASSWORD for the email address password
 
