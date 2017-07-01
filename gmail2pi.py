@@ -147,6 +147,9 @@ def read_gmail(subject):
 
 
 def main():
+    """
+    Main method
+    """
 
     print "Waiting for an email"
 
