@@ -1,5 +1,5 @@
 # Communicating with Raspberry Pi via email
-+ Sending command via email to your Raspberry Pi
++ Send commands via email to your Raspberry Pi
 
 # Requirements
 + Gmail account
