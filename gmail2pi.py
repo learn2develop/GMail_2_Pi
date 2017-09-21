@@ -104,7 +104,7 @@ def read_gmail(subject):
         mail.select('inbox')
     except imaplib.IMAP4.abort:
         return False
-    except imaplib.IMAP4.error
+    except imaplib.IMAP4.error:
         return False
     
     try:
@@ -115,7 +115,7 @@ def read_gmail(subject):
     
     except imaplib.IMAP4.abort:
         return False
-    except imaplib.IMAP4.error
+    except imaplib.IMAP4.error:
         return False
         
     mail.list()
